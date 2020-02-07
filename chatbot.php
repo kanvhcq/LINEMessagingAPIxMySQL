@@ -42,7 +42,7 @@
     return $result;
   }
 
-  $mysqli->query("INSERT INTO `log`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
+  $mysql->query("INSERT INTO `log`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
 
   $getUser = $mysql->query("SELECT * FROM `customer` WHERE `UserID`='$userID'");
   $getuserNum = $getUser->num_rows;
