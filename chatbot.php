@@ -18,12 +18,12 @@
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "line";
+  $dbname = "LINE";
   $mysql = new mysqli($servername, $username, $password, $dbname);
-  mysqli_set_charset($mysqli, "utf8");
+  mysqli_set_charset($mysql, "utf8");
 
   if ($mysql->connect_error){
-  $errorcode = $mysqli->connect_error;
+  $errorcode = $mysql->connect_error;
   print("MySQL(Connection)> ".$errorcode);
   }
 
@@ -42,9 +42,9 @@
     return $result;
   }
 
-  $mysql->query("INSERT INTO `log`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
+  $mysql->query("INSERT INTO `LOG`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
 
-  $getUser = $mysql->query("SELECT * FROM `customer` WHERE `UserID`='$userID'");
+  $getUser = $mysql->query("SELECT * FROM `Customer` WHERE `UserID`='$userID'");
   $getuserNum = $getUser->num_rows;
   $replyText["type"] = "text";
   if ($getuserNum == "0"){
