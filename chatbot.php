@@ -20,7 +20,7 @@
   $password = "";
   $dbname = "line";
   $conn = mysqli_connec($servername, $username, $password, $dbname);
-  mysqli_set_charset($conn,"utf8");
+  mysqli_set_charset($mysqli, "utf8");
 
   if ($mysqli->connect_error){
   $errorcode = $mysqli->connect_error;
