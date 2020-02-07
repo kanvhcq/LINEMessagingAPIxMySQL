@@ -59,7 +59,7 @@
   }
 
   $lineData['URL'] = "https://api.line.me/v2/bot/message/reply";
-  $lineData['AccessToken'] = "(ใส่ Channel AccessToken ของคุณตรงนี้)";
+  $lineData['AccessToken'] = "uH7/FdqH5XQrxB0t4yGuZmgfl92Y7ZpFa45bsGLitYHkE+eqbB+Sind850wztPqItL4WvDJjLW2eozCwS9Scs0dllMVR/wjLDG55+TzIk9/gPH10nYKQogSqbja+x+ZSAx1uR3aFpOfeNhjNplZhhAdB04t89/1O/w1cDnyilFU=";
 
   $replyJson["replyToken"] = $replyToken;
   $replyJson["messages"][0] = $replyText;
