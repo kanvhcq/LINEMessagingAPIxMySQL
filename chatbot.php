@@ -24,7 +24,7 @@
 
   if ($mysql->connect_error){
   $errorcode = $mysqli->connect_error;
-  print("MySQLI(Connection)> ".$errorcode);
+  print("MySQL(Connection)> ".$errorcode);
   }
 
   function sendMessage($replyJson, $sendInfo){
