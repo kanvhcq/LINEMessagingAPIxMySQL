@@ -19,13 +19,13 @@
   $username = "root";
   $password = "";
   $dbname = "line";
-  $mysql = new mysqli($servername, $username, $password, $dbname);
-  mysqli_set_charset($mysql, "utf8");
 
-  if ($mysql->connect_error){
-  $errorcode = $mysql->connect_error;
-  print("MySQL(Connection)> ".$errorcode);
-  }
+
+ $mysql = new mysqli($servername, $username, $password, $dbname);
+mysqli_set_charset($conn,"utf8");
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
 
 
   function sendMessage($replyJson, $sendInfo){
