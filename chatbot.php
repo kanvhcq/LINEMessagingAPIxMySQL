@@ -19,12 +19,12 @@
   $username = "root";
   $password = "";
   $dbname = "line";
-  $mysql = new mysqli($servername, $username, $password, $dbname);
+  $conn = mysqli_connec($servername, $username, $password, $dbname);
   mysqli_set_charset($mysql, "utf8");
 
-  if ($mysql->connect_error){
+  if ($mysqli->connect_error){
   $errorcode = $mysql->connect_error;
-  print("MySQL(Connection)> ".$errorcode);
+  print("MySQLI(Connection)> ".$errorcode);
   }
 
   function sendMessage($replyJson, $sendInfo){
@@ -42,7 +42,7 @@
     return $result;
   }
 
-  $mysql->query("INSERT INTO `log`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
+  $mysqli->query("INSERT INTO `log`(`UserID`, `Text`, `Timestamp`) VALUES ('$userID','$text','$timestamp')");
 
   $getUser = $mysql->query("SELECT * FROM `customer` WHERE `UserID`='$userID'");
   $getuserNum = $getUser->num_rows;
