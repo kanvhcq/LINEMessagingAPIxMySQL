@@ -19,10 +19,10 @@
   $username = "root";
   $password = "";
   $dbname = "line";
-  $conn = mysqli_connec($servername, $username, $password, $dbname);
+  $mysql = new mysqli($servername, $username, $password, $dbname);
   mysqli_set_charset($mysqli, "utf8");
 
-  if ($mysqli->connect_error){
+  if ($mysql->connect_error){
   $errorcode = $mysqli->connect_error;
   print("MySQLI(Connection)> ".$errorcode);
   }
