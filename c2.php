@@ -74,14 +74,22 @@ else if($message == "กินไรยัง"){
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-else if($message == "รูปหมา"){
-        $image_url = "https://images.app.goo.gl/Nukg2mc5TGRJxYLk8.jpg";
+
+else if($message == "ทำไร"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "https://www.youtube.com/";
         replyMsg($arrayHeader,$arrayPostData);
     }
+  if($typeMessage=='location'){
+            $locationTitle = $eventObj->getTitle();
+            $locationAddress = $eventObj->getAddress();
+            $locationLatitude = $eventObj->getLatitude();
+            $locationLongitude = $eventObj->getLongitude();
+            $textReplyMessage = 'สวัสดีครับ คุณ '.$typeMessage;         
+            $replyData = new TextMessageBuilder($textReplyMessage);                 
+        }       
+
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
