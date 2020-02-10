@@ -16,9 +16,9 @@
   $timestamp = $jsonData["events"][0]["timestamp"];
 
   $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "line";
+  $username = "ppdata_kan";
+  $password = "Ptc#02290";
+  $dbname = "ppdata_kan";
 $mysql = new mysqli($servername, $username, $password, $dbname);
   mysqli_set_charset($mysql, "utf8");
 
