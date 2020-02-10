@@ -22,11 +22,6 @@
 $mysql = new mysqli($servername, $username, $password, $dbname);
   mysqli_set_charset($mysql, "utf8");
 
-  if ($mysqli->connect_error){
-  $errorcode = $mysql->connect_error;
-  print("MySQL(Connection)> ".$errorcode);
-  }
-
   if ($mysql->connect_error){
   $errorcode = $mysql->connect_error;
   print("MySQL(Connection)> ".$errorcode);
