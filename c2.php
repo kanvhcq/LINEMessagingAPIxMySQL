@@ -61,6 +61,18 @@ else if($message == "ทำไร"){
         replyMsg($arrayHeader,$arrayPostData);
     }
 
+else if($message == "วันนี้ทำไร"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ได้หมด";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($message == "กินไรยัง"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เป็น BOT กินไม่ได้";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
