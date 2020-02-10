@@ -57,7 +57,7 @@
 else if($message == "ทำไร"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ดีค่ะ";
+        $arrayPostData['messages'][0]['text'] = "https://www.youtube.com/";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
