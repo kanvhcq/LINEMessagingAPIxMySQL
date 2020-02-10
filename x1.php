@@ -1,12 +1,9 @@
 <?php
-$servername = "localhost";
-  $username = "root";
-  $password = "Ptc#02290";
-  $dbname = "ppdata_kan";
-$mysql = new mysqli($servername, $username, $password, $dbname);
-  mysqli_set_charset($mysql, "utf8");
-
-  if ($mysql->connect_error){
-  $errorcode = $mysql->connect_error;
-  print("MySQL(Connection)> ".$errorcode);
-  }
+$host = "localhost";    
+$user = "root";    
+$pass = "Ptc#02290";    
+$db = "ppdata_kan";    
+mysql_connect($host, $user, $pass) or die("Could not connect to database"); 
+mysql_select_db($db) or die("Could not connect to database"); 
+mysql_query("SET NAMES utf8")
+?>
