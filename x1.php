@@ -1,4 +1,5 @@
-  $servername = "localhost";
+<?php
+$servername = "localhost";
   $username = "ppdata_kan";
   $password = "Ptc#02290";
   $dbname = "ppdata_kan";
