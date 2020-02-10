@@ -81,7 +81,7 @@ else if($message == "ทำไร"){
         $arrayPostData['messages'][0]['text'] = "https://www.youtube.com/";
         replyMsg($arrayHeader,$arrayPostData);
     }
-  if($typeMessage=='location'){
+ else if($typeMessage=='พิกัด'){
             $locationTitle = $eventObj->getTitle();
             $locationAddress = $eventObj->getAddress();
             $locationLatitude = $eventObj->getLatitude();
