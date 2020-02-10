@@ -1,9 +1,9 @@
 <?php
 $servername = "localhost";
-  $username = "root";
+  $username = "ppdata_kan";
   $password = "Ptc#02290";
   $dbname = "ppdata_kan";
-$conn = new mysqli($servername, $username, $password, $dbname);
+$mysql = new mysqli($servername, $username, $password, $dbname);
   mysqli_set_charset($mysql, "utf8");
 
   if ($mysql->connect_error){
