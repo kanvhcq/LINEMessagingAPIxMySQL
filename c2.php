@@ -75,7 +75,7 @@ else if($message == "กินไรยัง"){
     }
 
 else if($message == "รูปหมา"){
-        $image_url = "https://images.app.goo.gl/5UT7JqaQZv9fY48q6";
+        $image_url = "https://images.app.goo.gl/Nukg2mc5TGRJxYLk8.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
