@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "http://ppdatacenter.com/phpMyAdmin/index.php";
   $username = "ppdata_kan";
   $password = "Ptc#02290";
   $dbname = "ppdata_kan";
