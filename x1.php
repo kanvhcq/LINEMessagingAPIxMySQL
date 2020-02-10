@@ -1,5 +1,5 @@
 <?php
-$servername = "http://ppdatacenter.com/phpMyAdmin/db_structure.php?server=1&db=ppdata_kan";
+$servername = "http://ppdatacenter.com/phpMyAdmin";
   $username = "ppdata_kan";
   $password = "Ptc#02290";
   $dbname = "ppdata_kan";
