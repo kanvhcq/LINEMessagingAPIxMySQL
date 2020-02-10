@@ -15,8 +15,8 @@
   $text = $jsonData["events"][0]["message"]["text"];
   $timestamp = $jsonData["events"][0]["timestamp"];
 
-  $servername = "http://ppdatacenter.com/phpMyAdmin";
-  $username = "ppdata_kan";
+  $servername = "ppdata_kan";
+  $username = "localhost";
   $password = "Ptc#02290";
   $dbname = "ppdata_kan";
 $mysql = new mysqli($servername, $username, $password, $dbname);
