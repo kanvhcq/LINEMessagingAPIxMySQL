@@ -15,9 +15,9 @@
   $text = $jsonData["events"][0]["message"]["text"];
   $timestamp = $jsonData["events"][0]["timestamp"];
 
-  $objConnect = msql_connect("localhost","ppdata_kan","Ptc#02290") or die(mysql_error());
-  $objDB = mysql_select_db("ppdata_kan");
-  $objQuery= mysql_query($)\\\
+  $objConnect = msqli_connect("localhost","ppdata_kan","Ptc#02290") or die(mysql_error());
+  $objDB = mysqli_select_db("ppdata_kan");
+ 
   function sendMessage($replyJson, $sendInfo){
           $ch = curl_init($sendInfo["URL"]);
           curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
