@@ -15,8 +15,18 @@
   $text = $jsonData["events"][0]["message"]["text"];
   $timestamp = $jsonData["events"][0]["timestamp"];
 
-  $objConnect = msqli_connect("localhost","ppdata_kan","Ptc#02290") or die(mysql_error());
-  $objDB = mysqli_select_db("ppdata_kan");
+$servername = "localhost";
+  $username = "ppdata_kan";
+  $password = "Ptc#02290";
+  $dbname = "ppdata_kan";
+  $mysql = new mysqli($servername, $username, $password, $dbname);
+  mysqli_set_charset($mysql, "utf8");
+
+  if ($mysql->connect_error){
+  $errorcode = $mysql->connect_error;
+  print("MySQL(Connection)> ".$errorcode);
+  }
+
  
   function sendMessage($replyJson, $sendInfo){
           $ch = curl_init($sendInfo["URL"]);
