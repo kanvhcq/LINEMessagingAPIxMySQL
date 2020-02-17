@@ -1,9 +1,13 @@
 <?php
-$Setup_Server = ‘http://ppdatacenter.com/phpMyAdmin/’;
-$Setup_User = ‘ppdata_kan’;
-$Setup_Pwd = ‘Ptc#02290’;
-$Setup_Database = ‘ppdata_kan’;
-mysql_connect($Setup_Server,$Setup_User,$Setup_Pwd);
-mysql_query(“use $Setup_Database”);
-mysql_query(“SET NAMES UTF8”);
 
+$servername = "localhost";
+  $username = "ppdata_kan";
+  $password = "Ptc#02290";
+  $dbname = "ppdata_kan";
+  $mysql = new mysqli($servername, $username, $password, $dbname);
+  mysqli_set_charset($mysql, "utf8");
+
+  if ($mysql->connect_error){
+  $errorcode = $mysql->connect_error;
+  print("MySQL(Connection)> ".$errorcode);
+  }
